@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function get_arm_kernel_stuff
+{
+  git submodule update --init --recursive
+}
+
+function get_raspbian_lite
+{
+  wget https://downloads.raspberrypi.org/raspbian_lite_latest
+  unzip ./raspbian_lite_latest
+}
+
+get_arm_kernel_stuff
+get_raspbian_lite
